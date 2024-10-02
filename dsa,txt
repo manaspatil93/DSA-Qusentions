@@ -1,0 +1,30 @@
+ the code of the palindrom
+
+
+ import java.util.Scanner;
+
+public class cheking_the_pindrom {
+    public static boolean isplandrom(){
+        System.out.print("please enter an no.");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        String str = String.valueOf(n);
+        int len = str.length()-1;
+        for(int i= 0; i<str.length();i++){
+            if (str.charAt(i) != str.charAt(len)){
+
+                return false;
+
+            }else{
+                len--;
+            }
+        }
+        System.out.println("yes the no is pindrom");
+        return true;
+
+    }
+    public static void main(String[] args) {
+        System.out.println(isplandrom());
+    }
+}
+
